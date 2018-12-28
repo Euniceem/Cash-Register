@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Cash Register</title>
+</head>
+<body>
+    <div class = "container">
+        <span id="display" class="item item-header">0</span>
+        
+        <button id="clear" class="btn silver clear">A/C</button>
+        <button class="btn silver negative">+/-</button>
+        <button class="btn orange silver">%</button>
+        <button id = 'divide' class="btn orange">÷</button>
+
+        <button class="btn num">7</button>
+        <button class="btn num">8</button>
+        <button class="btn num">9</button>
+        <button id = 'multiply' class="btn orange">x</button>
+
+        <button class="btn num">4</button>
+        <button class="btn num">5</button>
+        <button class="btn num">6</button>
+        <button id = 'minus' class="btn orange subtract">-</button>
+        
+        <button class="btn num">1</button>
+        <button class="btn num">2</button>
+        <button class="btn num">3</button>
+        <button id = 'plus' class="btn orange add">+</button>
+        
+        <button id = 'zero' class="btn num">0</button>
+        <button class="btn num">.</button>
+        <button id = 'equal' class="btn equals">=</button>
+    </div>   
+    <div class="cashRegister">
+        <button id="balance">Get Balance</button>
+        <button id="deposit">Deposit</button>
+        <button id="withdraw">Withdraw</button>
+    </div>
+    <script src="js/calculator.js"></script>
+    <script src="js/cash_register.js"></script>
+</body>
+</html>
