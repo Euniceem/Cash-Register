@@ -1,64 +1,64 @@
 //add sign
 const addElem = document.getElementById('plus');
-addElem.addEventListener('click',letsAdd)
-function letsAdd(){
-  storage.push(Number(display.innerHTML));
-  storage.push('+');
-  display.innerHTML='+';  
+addElem.addEventListener('click', letsAdd)
+function letsAdd() {
+    storage.push(Number(display.innerHTML));
+    storage.push('+');
+    display.innerHTML = '+';
 }
 
 //subtract sign
 const subtractElem = document.getElementById('minus')
-subtractElem.addEventListener('click',letsMinus);
-function letsMinus(){
+subtractElem.addEventListener('click', letsMinus);
+function letsMinus() {
     storage.push(Number(display.innerHTML));
     storage.push('-');
-    display.innerHTML='-'
+    display.innerHTML = '-';
 }
 
 //multiply sign
 const multiplyElem = document.getElementById('multiply');
-multiplyElem.addEventListener('click',letsMultiply);
-function letsMultiply(){
+multiplyElem.addEventListener('click', letsMultiply);
+function letsMultiply() {
     storage.push(Number(display.innerHTML));
     storage.push('x');
-    display.innerHTML='x';
+    display.innerHTML = 'x';
 }
 
 //divide sign
 const divideElem = document.getElementById('divide');
-divideElem.addEventListener('click',letsDivide);
-function letsDivide(){
+divideElem.addEventListener('click', letsDivide);
+function letsDivide() {
     storage.push(Number(display.innerHTML));
     storage.push('÷');
-    display.innerHTML='÷'
+    display.innerHTML = '÷';
 }
 
 //equal sign
 const equalElem = document.getElementById('equal');
-equalElem.addEventListener('click',letsEqual);
+equalElem.addEventListener('click', letsEqual);
 
 var y = 0;
-function letsEqual(){
+function letsEqual() {
     storage.push(Number(display.innerHTML))
-    if(typeof storage[0]==='number'){
+    if (typeof storage[0] === 'number') {
         y = storage[0];
-    }else{
-        throw error
+    } else {
+        throw error;
     }
-    
-    for(var i=0;i<storage.length;i++){
-       if(storage[i]==="+"){
-           y+=storage[i+1]
-       }else if(storage[i]==="-"){
-           y-=storage[i+1]
-       }else if(storage[i]==='x'){
-           y*=storage[i+1]
-       }else if(storage[i]==='÷'){
-           y/=storage[i+1]
-       }
 
-        
+    for (var i = 0; i < storage.length; i++) {
+        if (storage[i] === "+") {
+            y += storage[i + 1];
+        } else if (storage[i] === "-") {
+            y -= storage[i + 1];
+        } else if (storage[i] === 'x') {
+            y *= storage[i + 1];
+        } else if (storage[i] === '÷') {
+            y /= storage[i + 1];
+        }
+
+
     }
     display.innerHTML = y;
     storage = [];
@@ -76,7 +76,7 @@ function letsEqual(){
 //             return total;
 //         }    
 //     }
-  
+
 //     var getTotal = function(){
 //         return total;
 //     }
@@ -128,7 +128,7 @@ function letsEqual(){
 //     var clearMemory = function(){
 //         memory = 0;
 //         total = 0;
-        
+
 //     }
 
 //     return{
